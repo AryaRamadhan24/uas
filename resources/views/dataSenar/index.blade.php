@@ -28,8 +28,8 @@
                             <th>Merk</th>
                             <th>Jenis</th>
                             <th>Ukuran</th>
-                            <th>Harga</th>
                             <th>Stok</th>
+                            <th>Harga</th>
                         </tr>
                     </thead>
                     <tbody>
