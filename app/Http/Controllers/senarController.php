@@ -14,7 +14,7 @@ class senarController extends Controller
     }
     public function add(){
         $data =  DB::table('data_jenis')->get();
-        return view('datasenar.tambah',compact('data'));
+        return view('dataSenar.tambah',compact('data'));
     }
 
     public function store(Request $request){
