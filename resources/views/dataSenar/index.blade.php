@@ -25,22 +25,22 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            {{-- <th>Merk</th> --}}
+                            <th>Merk</th>
                             <th>Jenis</th>
                             <th>Ukuran</th>
-                            {{-- <th>Harga</th>
+                            <th>Harga</th>
                             <th>Stok</th>
-                            <th>Action</th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($data as $i=>$item)
                         <tr>
                             <td>{{ $i+1 }}</td>
+                            <td>{{ $item->merk }}</td>
                             <td>{{ $item->nama }}</td>
                             <td>{{ $item->ukuran }}</td>
-
-
+                            <td>{{ $item->stok }}</td>
+                            <td>{{ $item->harga }}</td>
                         </tr>
                         @endforeach
 
