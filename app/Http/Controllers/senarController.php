@@ -33,8 +33,11 @@ class senarController extends Controller
     );
         DB::table('data_senar')->insert([
             'senar_id'=>Uuid::generate(4),
+            'merk'=>$request->merk,
             'id_jenis'=>$request->id_jenis,
-            'id_ukuran'=>$request->id_ukuran
+            'id_ukuran'=>$request->id_ukuran,
+            'stok'=>$request->stok,
+            'harga'=>$request->harga
         ]);
         // Alert::success('selamat' ,'anda berhasil mengimputkan');
 

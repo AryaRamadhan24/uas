@@ -15,12 +15,15 @@ class CreateTabelSenar extends Migration
     {
         Schema::create('data_senar', function (Blueprint $table) {
             $table->string('senar_id',40);
+            $table->string('merk');
             $table->string('id_jenis');
             $table->string('id_ukuran');
+            $table->string('stok');
+            $table->string('harga');
 
 
             $table->primary('senar_id');
-            
+
             // relasi senar dengan jenis
             $table->foreign('id_jenis')
             ->references('jenis_id')->on('data_jenis')->onDelete('restrict');
