@@ -9,12 +9,20 @@ use Illuminate\Support\Facades\DB;
 class senarController extends Controller
 {
     public function index(){
-        $data = DB::table('data_senar as a')->join('data_jenis as b', 'a.id_jenis', '=', 'b.jenis_id')->get();
+        // $data = DB::table('data_senar as a')->join('data_jenis as b', 'a.id_jenis', '=', 'b.jenis_id')->get();
+
+
+        // $data_ukuran = DB::table('data_senar as a')->join('data_ukuran as b', 'a.id_ukuran', '=', 'b.ukuran_id')->get();
+        $data = DB::table('data_senar as a')
+->join('data_jenis as b', 'a.id_jenis', '=', 'b.jenis_id')
+->join('data_ukuran as c', 'a.id_ukuran', '=', 'c.ukuran_id')->get();
+
         return view ('dataSenar.index', compact('data'));
     }
     public function add(){
         $data =  DB::table('data_jenis')->get();
-        return view('dataSenar.tambah',compact('data'));
+        $data_ukuran =  DB::table('data_ukuran')->get();
+        return view('dataSenar.tambah',compact('data','data_ukuran'));
     }
 
     public function store(Request $request){

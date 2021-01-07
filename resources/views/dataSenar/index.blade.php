@@ -27,19 +27,23 @@
                             <th>No</th>
                             {{-- <th>Merk</th> --}}
                             <th>Jenis</th>
-                            {{-- <th>Ukuran</th>
-                            <th>Harga</th>
+                            <th>Ukuran</th>
+                            {{-- <th>Harga</th>
                             <th>Stok</th>
                             <th>Action</th> --}}
                         </tr>
-                    </thead>    
+                    </thead>
                     <tbody>
                         @foreach ($data as $i=>$item)
                         <tr>
                             <td>{{ $i+1 }}</td>
                             <td>{{ $item->nama }}</td>
+                            <td>{{ $item->ukuran }}</td>
+
+
                         </tr>
                         @endforeach
+
                     </tbody>
                 </table>
             </div>

@@ -9,7 +9,7 @@
                 
                 <div class="form-group">
                     <label class="form-control-label" for="exampleFormControlInput1">Jenis</label>
-                    <select name="jenis_id" class="form-control" id="exampleFormControlSelect1">
+                    <select name="id_jenis" class="form-control" id="exampleFormControlSelect1">
                         <option selected="" disabled="">Jenis</option>
                         @foreach ($data as $dt)
                         <option value="{{$dt->jenis_id}}">{{$dt->nama}}</option>
@@ -20,11 +20,16 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="exampleFormControlTextarea2">jabatan</label>
-                  <input type="text" name="id_ukuran" class="form-control" id="exampleFormControlInput1" placeholder="ukuran">
-                  @error('id_ukuran')
-                  <div class="alert-danger">{{ $message }}</div>
-                  @enderror
+                    <label class="form-control-label" for="exampleFormControlInput1">ukuran</label>
+                    <select name="id_ukuran" class="form-control" id="exampleFormControlSelect1">
+                        <option selected="" disabled="">Jenis</option>
+                        @foreach ($data_ukuran as $dt_u)
+                        <option value="{{$dt_u->ukuran_id}}">{{$dt_u->ukuran}}</option>
+                        @endforeach
+                    </select>
+                    @error('ukuran')
+                    <div class="alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 
                 <div class="form-group">
