@@ -39,14 +39,14 @@
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="exampleFormControlInput1">stok</label>
-                    <input type="number" name="ukuran" class="form-control" id="exampleFormControlInput1" placeholder="input ukuran">
+                    <input type="number" name="stok" class="form-control" id="exampleFormControlInput1" placeholder="input ukuran">
                     @error('stok')
                     <div class="alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="exampleFormControlInput1">harga</label>
-                    <input type="number" name="ukuran" class="form-control" id="exampleFormControlInput1" placeholder="input ukuran">
+                    <input type="number" name="harga" class="form-control" id="exampleFormControlInput1" placeholder="input ukuran">
                     @error('harga')
                     <div class="alert-danger">{{ $message }}</div>
                     @enderror
